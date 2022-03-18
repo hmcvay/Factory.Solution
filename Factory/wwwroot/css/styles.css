@@ -1,8 +1,18 @@
 body {
   background-color: #018281;
+  font-family: sans-serif;
 }
 
-#header {
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;
+}
+
+/* #header {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -13,33 +23,29 @@ body {
   width: 100%;
   border: 2px solid black;
   color: black;
-  background-color:  #00807F;
+  background-color:  #008080;
   font-size: 20pt;
-}
-
-.header-tiles {
-  height: 100px;
-  width: 100px;
-  background-color: white;
-}
-
-/* #title1{
-  background-color: aqua;
-  height: 100px;
-  width: 100px;
-}
-
-#title2{
-  background-color: yellow;
-  height: 100px;
-  width: 100px;
-}
-
-#title3{
-  background-color:black;
-  height: 100px;
-  width: 100px;
 } */
+
+#footer {
+  position: absolute;
+  bottom:0;
+  width: 100%;
+  height: 2.5rem;
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-style: outset white 2px;
+  background-color: #c3c3c3;
+}
+
+#home {
+border: 2px white;
+border-style: outset;
+width: 100px;
+text-align: center;
+}
 
 
 

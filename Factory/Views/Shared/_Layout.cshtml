@@ -6,15 +6,20 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="~/css/styles.css">
   </head>
-  <div id="header">
-    <div id="engineers">@Html.ActionLink("Engineers","Index", "Engineers")</div>
-    <div id="machines">@Html.ActionLink("Machines","Index","Machines")</div>
-    <div><img src="~/img/Mail.ico"></div>
-  </div>
-  <body>
-    @RenderBody()
-    <div id="footer">
-      <div id="home">@Html.ActionLink("Home", "Index", "Home")</div>
+    <div id="header">
+      <div id="engineers">@Html.ActionLink("Engineers","Index", "Engineers")</div>
+      <div id="machines">@Html.ActionLink("Machines","Index","Machines")</div>
+      <div><img src="~/img/Mail.ico"></div>
     </div>
-  </body>
+    <body>
+      <div id="page-containger">
+        <div id="content-wrap">
+        @RenderBody()
+          <div id="footer">
+            <div id="home"><img src="~/img/Windows Logo (without text).ico">@Html.ActionLink(" Home", "Index", "Home")
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
 </html>
