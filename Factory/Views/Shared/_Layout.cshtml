@@ -2,14 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Best Restaurants!</title>
+    <title>Factory</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="~/css/styles.css">
   </head>
   <div id="header">
-    <div class="home">@Html.ActionLink("Home", "Index", "Home")</div>
-    <div class="engineers">@Html.ActionLink("Engineers","Index", "Engineers")</div>
-    <div class="machines">@Html.ActionLink("Machines","Index","Machines")</div>
+    <div id="home">@Html.ActionLink("Home", "Index", "Home")</div>
+    <div id="engineers" class="header-link">@Html.ActionLink("Engineers","Index", "Engineers")</div>
+    <div id="machines">@Html.ActionLink("Machines","Index","Machines")</div>
   </div>
   <body>
     @RenderBody()
