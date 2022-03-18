@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="~/css/styles.css">
   </head>
   <div id="header">
-    <div id="home">@Html.ActionLink("Home", "Index", "Home")</div>
-    <div id="engineers" class="header-link">@Html.ActionLink("Engineers","Index", "Engineers")</div>
+    <div id="engineers">@Html.ActionLink("Engineers","Index", "Engineers")</div>
     <div id="machines">@Html.ActionLink("Machines","Index","Machines")</div>
+    <div><img src="~/img/Mail.ico"></div>
   </div>
   <body>
     @RenderBody()
+    <div id="footer">
+      <div id="home">@Html.ActionLink("Home", "Index", "Home")</div>
+    </div>
   </body>
 </html>

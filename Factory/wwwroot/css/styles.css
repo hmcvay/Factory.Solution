@@ -1,16 +1,47 @@
+body {
+  background-color: #018281;
+}
+
 #header {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 50px;
-  height: 100px;
+  gap: 50px;
+  height: 75px;
   width: 100%;
   border: 2px solid black;
-  color: white;
-  background-color: red;
+  color: black;
+  background-color:  #00807F;
   font-size: 20pt;
 }
+
+.header-tiles {
+  height: 100px;
+  width: 100px;
+  background-color: white;
+}
+
+/* #title1{
+  background-color: aqua;
+  height: 100px;
+  width: 100px;
+}
+
+#title2{
+  background-color: yellow;
+  height: 100px;
+  width: 100px;
+}
+
+#title3{
+  background-color:black;
+  height: 100px;
+  width: 100px;
+} */
+
+
 
 a:hover{
   color: black;
