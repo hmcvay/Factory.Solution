@@ -6,17 +6,22 @@
 @using Factory.Models;
 @model List<Factory.Models.Engineer>;
 
-  <h1>Engineers</h1>
+<div class="box">
+  <div class="box-header">
+    <div class="title">Engineers</div>
+    <div class="x">@Html.ActionLink("x","Index", "Home")</div>
+  </div>
+  <div class="box-content">
+    @if (@Model.Count == 0)
+    {
+      <h3>You have no engineers</h3>
+    }  
 
-  @if (@Model.Count == 0)
-  {
-    <h3>You have no engineers</h3>
-  }  
+    @foreach (Engineer engineer in Model)
+    {
+      <li>@Html.ActionLink($"{engineer.Name}", "Details", new { id = engineer.EngineerId })</li>
+    }
 
-  @foreach (Engineer engineer in Model)
-  {
-    <li>@Html.ActionLink($"{engineer.Name}", "Details", new { id = engineer.EngineerId })</li>
-  }
-
-  <p>@Html.ActionLink("Add Engineer", "Create")</p>
-  <!-- <p>@Html.ActionLink("Return", "Index", "Home")</p> -->
+    <p>@Html.ActionLink("Add Engineer", "Create")</p>
+  </div>
+</div>
