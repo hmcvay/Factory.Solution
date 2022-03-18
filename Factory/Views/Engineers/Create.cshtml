@@ -4,19 +4,24 @@
 
 @model Factory.Models.Engineer
 
-<h4>Add Engineer</h4>
+<div class="box">
+  <div class="box-header">
+    <div class="title">Add Engineer</div>
+    <div class="spacer"></div>
+    <div class="x">@Html.ActionLink("x","Index", "Home")</div>
+    
+  </div>
+  <div class="box-content">
+    @using (Html.BeginForm())
+    {
+      @Html.LabelFor(model => model.Name, "Name: ")
+      @Html.TextBoxFor(model => model.Name)
+      <br>
+      @Html.Label("Assign Machine")
+      @Html.DropDownList("MachineId")
 
-@using (Html.BeginForm())
-{
-  @Html.LabelFor(model => model.Name, "Name:")
-  @Html.TextBoxFor(model => model.Name)
-  <br>
-  @Html.Label("Assign Machine")
-  @Html.DropDownList("MachineId")
-
-  <br>
-  <input type="submit" value="Add" class="btn btn-default" />
-  
-}
-<!-- <p>@Html.ActionLink("Show all artists", "Index")</p> -->
-<!-- <p>@Html.ActionLink("Return Home", "Index", "Home")</p> -->
+      <br>
+      <input type="submit" value="Add" class="button" />    
+    }
+  </div>
+</div>
