@@ -27,7 +27,7 @@ namespace Factory.Controllers
       return View();
     }
     [HttpPost]
-    public ActionResult Create(Engineer Engineer, int MachineId)
+    public ActionResult Create(Engineer engineer, int MachineId)
     {
       _db.Engineers.Add(engineer);
       _db.SaveChanges();
@@ -88,11 +88,11 @@ namespace Factory.Controllers
     }
 
     [HttpPost]
-    public ActionResult AddMachine(Machine machine, int MachineId)
+    public ActionResult AddMachine(Engineer engineer, int MachineId)
     {
       if (MachineId != 0)
       {
-        _db.MachineEngineer.Add(new MachineEngineer() { EngineerId = MachineId, EngineerId = engineer.EngineerId});
+         _db.MachineEngineer.Add(new MachineEngineer() { MachineId = MachineId, EngineerId = engineer.EngineerId});
         _db.SaveChanges();
       }
       return RedirectToAction("Index");
