@@ -6,20 +6,26 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="~/css/styles.css">
   </head>
-    <div id="header">
-      <div id="engineers">@Html.ActionLink("Engineers","Index", "Engineers")</div>
-      <div id="machines">@Html.ActionLink("Machines","Index","Machines")</div>
-      <div><img src="~/img/Mail.ico"></div>
-    </div>
-    <body>
-      <div id="page-containger">
-        <div id="content-wrap">
+  <body>
+    <div id="page-containger">
+      <div id="content-wrap">
+        <div id="home-folders">
+          <div class="folder"><img src="~/img/My Computer.ico"><br>C:\>_</div>
+          <div class="folder"><img src="~/img/Network Neighborhood (16x16px & 32x32px).ico"><br>Network<br>Neighborhood</div>
+          <div class="folder"><img src="~/img/Web-documents folder 2.ico"><br>Documents</div>
+          <div class="folder"><img src="~/img/Controls Folder.ico"><br>Controls</div>
+          <div class="folder"><img src="~/img/Recycle Bin with paper.ico"><br>Recycle<br>Bin</div>
+        </div>
+        <div id="models-folders">
+          <div class="folder"><img src="~/img/Folder (hi-res).ico"><br>@Html.ActionLink("Engineers","Index", "Engineers")</div>
+          <div class="folder"><img src="~/img/Folder (hi-res).ico"><br>@Html.ActionLink("Machines","Index", "Machines")</div>
+        </div>
         @RenderBody()
-          <div id="footer">
-            <div id="home"><img src="~/img/Windows Logo (without text).ico">@Html.ActionLink(" Home", "Index", "Home")
-            </div>
-          </div>
+        <div id="footer">
+          <div id="home"><img src="~/img/Windows Logo (without text).ico">@Html.ActionLink(" Home", "Index", "Home")</div>
+          <div id="time"><img src="~/img/Book with clock.ico"> 12:34</div>
         </div>
       </div>
-    </body>
+    </div>
+  </body>
 </html>
