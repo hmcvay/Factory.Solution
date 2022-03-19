@@ -4,20 +4,28 @@
 
 @model Factory.Models.Engineer
 
-<h1> Edit </h1>
+<div class="box">
+  <div class="title">
+    <img src="~/img/Documents Folder.ico" width="25" height="25" class="title" />
+    <p class="title">Edit </p>
+    <button>X</button>
+    <button>?</button>
+  </div>
+  <div class="content">
+    <h2> Edit Engineer: @Html.DisplayFor(model => model.Name)</h2>
 
-<h2> Edit Engineer: @Html.DisplayFor(model => model.Name)</h2>
+    @using (Html.BeginForm())
+    {
+      @Html.HiddenFor(model => model.EngineerId)
+      @Html.LabelFor(model => model.Name)
+      @Html.EditorFor(model => model.Name)
 
-@using (Html.BeginForm())
-{
-  @Html.HiddenFor(model => model.EngineerId)
-  @Html.LabelFor(model => model.Name)
-  @Html.EditorFor(model => model.Name)
+      @Html.Label("Select machine")
+      @Html.DropDownList("MachineId")
 
-  @Html.Label("Select machine")
-  @Html.DropDownList("MachineId")
+      <input type="submit" value="Save" />
+    }
 
-  <input type="submit" value="Save" />
-}
-
-<p>@Html.ActionLink("All Engineers", "Index")</p>
+    <button>@Html.ActionLink("All Engineers", "Index")</button>
+  </div>
+</div>
