@@ -18,11 +18,14 @@
     {
       <h4>You have no engineers</h4>
     }  
-
-    @foreach (Engineer engineer in Model)
-    {
-      <p>@Html.ActionLink($"{engineer.Name}", "Details", new { id = engineer.EngineerId })</p>
-    }
+    <div class="all-engineers">
+      @* <ol> *@
+      @foreach (Engineer engineer in Model)
+      {
+        <p class="each-engineeer">@Html.ActionLink($"{engineer.Name}", "Details", new { id = engineer.EngineerId })</p>
+      }
+      @* </ol> *@
+    </div>
     <button>@Html.ActionLink("Add", "Create")</button>
   </div>
 </div>
