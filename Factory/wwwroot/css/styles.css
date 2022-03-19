@@ -146,11 +146,11 @@ div.content{
   padding:13px 12px 12px;
   height:100%;
   width:calc(100% - 26px);
-  display:inline-block;
+  /* display:inline-block; */
 }
 div.content p{
   font-family:"MS Sans Serif";
-  font-size:14px;
+  font-size:20px;
 }
 div.content button{
   font-family:sans-serif;
@@ -165,6 +165,13 @@ div.content button{
   display:block;
   position:relative;
   bottom:0px;
+}
+
+.button-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  /* gap: 2px; */
 }
 
 

@@ -4,31 +4,41 @@
 
 @model Factory.Models.Engineer
 
-<h2> Engineer Details </h2>
+<div class="box">
+  <div class="title">
+    <img src="~/img/Documents Folder.ico" width="25" height="25" class="title" />
+    <p class="title">Engineer Details </p>
+     <button>X</button>
+    <button>?</button>
+  </div>
+  <div class="content">
+    <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
 
-<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
-
-@if (@Model.JoinEntities.Count == 0)
-{
-  <p> This Engineer is not certified for any machines </p>
-}
-else
-{
-  <h4> @Model.Name is certified for the following: </h4>
-  <ul>
-    @foreach (var join in Model.JoinEntities)
+    @if (@Model.JoinEntities.Count == 0)
     {
-      <li>@join.Machine.Type</li>
-      @using (Html.BeginForm("DeleteMachine", "Engineers"))
-      {
-        @Html.Hidden("joinId", @join.MachineEngineerId)
-        <input type="submit" value="Remove" />
-      }
+      <p> This Engineer is not certified for any machines </p>
     }
-  </ul>
-}
-<p>@Html.ActionLink("Add Machine", "AddMachine", new { id = Model.EngineerId})</p>
-<p>@Html.ActionLink("Edit Engineer", "Edit", new{id = Model.EngineerId})</p>
-<p>@Html.ActionLink("Delete Engineer", "Delete", new{id = Model.EngineerId})</p>
-<!-- <p>@Html.ActionLink("Back", "Index")</p> -->
-<!-- <p>@Html.ActionLink("Return Home", "Index", "Home")</p> -->
+    else
+    {
+      <h4> @Model.Name is certified for the following: </h4>
+      <ul>
+        @foreach (var join in Model.JoinEntities)
+        {
+          <li>@join.Machine.Type</li>
+          @using (Html.BeginForm("DeleteMachine", "Engineers"))
+          {
+            @Html.Hidden("joinId", @join.MachineEngineerId)
+            <input type="submit" value="Remove" />
+          }
+        }
+      </ul>
+    }
+    <div class="button-layout">
+      <button>@Html.ActionLink("Add Machine", "AddMachine", new { id = Model.EngineerId})</button>
+      <button>@Html.ActionLink("Edit Engineer", "Edit", new{id = Model.EngineerId})</button>
+      <button>@Html.ActionLink("Delete Engineer", "Delete", new{id = Model.EngineerId})</button>
+    </div>  
+  </div>
+</div>
+
+

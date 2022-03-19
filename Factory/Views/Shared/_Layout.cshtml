@@ -7,37 +7,37 @@
     <link rel="stylesheet" href="~/css/styles.css">
   </head>
   <body>
-    @RenderBody()
-    <div id="page-containger">
-      <div id="content-wrap">
-        <div id="home-folders">
-          <div class="folder"><img src="~/img/My Computer.ico"><br>C:\>_</div>
-          <div class="folder"><img src="~/img/Network Neighborhood (16x16px & 32x32px).ico"><br>Network<br>Neighborhood</div>
-          <div class="folder"><img src="~/img/Web-documents folder 2.ico"><br>Documents</div>
-          <div class="folder"><img src="~/img/Controls Folder.ico"><br>Controls</div>
-          <div class="folder"><img src="~/img/Recycle Bin with paper.ico"><br>Recycle<br>Bin</div>
+  <div id="page-containger">
+    <div id="content-wrap">
+      <div id="home-folders">
+        <div class="folder"><img src="~/img/My Computer.ico"><br>C:\>_</div>
+        <div class="folder"><img src="~/img/Network Neighborhood (16x16px & 32x32px).ico"><br>Network<br>Neighborhood</div>
+        <div class="folder"><img src="~/img/Web-documents folder 2.ico"><br>Documents</div>
+        <div class="folder"><img src="~/img/Controls Folder.ico"><br>Controls</div>
+        <div class="folder"><img src="~/img/Recycle Bin with paper.ico"><br>Recycle<br>Bin</div>
+      </div>
+      <div id="models-folders">
+        <div class="folder"><img src="~/img/Folder (hi-res).ico"><br>@Html.ActionLink("Engineers","Index", "Engineers")</div>
+        <div class="folder"><img src="~/img/Folder (hi-res).ico"><br>@Html.ActionLink("Machines","Index", "Machines")</div>
+      </div>
+      <div class="static-box">
+        <div class="title">
+          <img src="~/img/Alarm (2 of 8).ico" width="25" height="25" class="title" />
+          <p class="title">Alert!</p>
+          <button>X</button>
+          <button>?</button>
         </div>
-        <div id="models-folders">
-          <div class="folder"><img src="~/img/Folder (hi-res).ico"><br>@Html.ActionLink("Engineers","Index", "Engineers")</div>
-          <div class="folder"><img src="~/img/Folder (hi-res).ico"><br>@Html.ActionLink("Machines","Index", "Machines")</div>
-        </div>
-        <div class="static-box">
-          <div class="title">
-            <img src="~/img/Alarm (2 of 8).ico" width="25" height="25" class="title" />
-            <p class="title">Alert!</p>
-            <button>X</button>
-            <button>?</button>
-          </div>
-          <div class="content">
-            <h5><img src="~/img/Warning.ico" width="15px" height="15px"> Don't forget to email applicants! <img src="~/img/Warning.ico" width="15px" height="15px"></h5>
-            <button>OK</button>
-          </div>
-        </div>
-        <div id="footer">
-          <div id="home"><img src="~/img/Windows Logo (without text).ico">@Html.ActionLink(" Home", "Index", "Home")</div>
-          <div id="time"><img src="~/img/Book with clock.ico"> 12:34</div>
+        <div class="content">
+          <h5><img src="~/img/Warning.ico" width="15px" height="15px"> Don't forget to email applicants! <img src="~/img/Warning.ico" width="15px" height="15px"></h5>
+          <button>OK</button>
         </div>
       </div>
+      @RenderBody()
+      <div id="footer">
+        <div id="home"><img src="~/img/Windows Logo (without text).ico">@Html.ActionLink(" Home", "Index", "Home")</div>
+        <div id="time"><img src="~/img/Book with clock.ico"> 12:34</div>
+      </div>
     </div>
+  </div>
   </body>
 </html>
