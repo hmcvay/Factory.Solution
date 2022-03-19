@@ -7,22 +7,41 @@
 @model List<Factory.Models.Engineer>;
 
 <div class="box">
+    <div class="title">
+      <img src="~/img/Documents Folder.ico" width="25" height="25" class="title" />
+      <p class="title">Engineers</p>
+      <button>X</button>
+      <button>?</button>
+    </div>
+    <div class="content">
+      
+    </div>
+       @if (@Model.Count == 0)
+      {
+        <h4>You have no engineers</h4>
+      }  
+
+      @foreach (Engineer engineer in Model)
+      {
+        <li>@Html.ActionLink($"{engineer.Name}", "Details", new { id = engineer.EngineerId })</li>
+      }
+      <button>@Html.ActionLink("Add", "Create")</button>
+    </div>
+  </div>
+
+
+
+
+
+@* <div class="box">
   <div class="box-header">
     <div class="title">Engineers</div>
     <div class="spacer"></div>
     <div class="x">@Html.ActionLink("x","Index", "Home")</div>
   </div>
   <div class="box-content">
-    @if (@Model.Count == 0)
-    {
-      <h3>You have no engineers</h3>
-    }  
-
-    @foreach (Engineer engineer in Model)
-    {
-      <li>@Html.ActionLink($"{engineer.Name}", "Details", new { id = engineer.EngineerId })</li>
-    }
-
-    <p>@Html.ActionLink("Add Engineer", "Create", new{@class="button"})</p>
+    <div class="inner-box">
+     
+    </div>
   </div>
-</div>
+</div> *@

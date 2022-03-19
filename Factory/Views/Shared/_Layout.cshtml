@@ -20,6 +20,18 @@
           <div class="folder"><img src="~/img/Folder (hi-res).ico"><br>@Html.ActionLink("Engineers","Index", "Engineers")</div>
           <div class="folder"><img src="~/img/Folder (hi-res).ico"><br>@Html.ActionLink("Machines","Index", "Machines")</div>
         </div>
+        <div class="static-box">
+          <div class="title">
+            <img src="~/img/Alarm (2 of 8).ico" width="25" height="25" class="title" />
+            <p class="title">Alert!</p>
+            <button>X</button>
+            <button>?</button>
+          </div>
+          <div class="content">
+            <h5><img src="~/img/Warning.ico" width="15px" height="15px"> Don't forget to email applicants! <img src="~/img/Warning.ico" width="15px" height="15px"></h5>
+            <button>OK</button>
+          </div>
+        </div>
         @RenderBody()
         <div id="footer">
           <div id="home"><img src="~/img/Windows Logo (without text).ico">@Html.ActionLink(" Home", "Index", "Home")</div>
