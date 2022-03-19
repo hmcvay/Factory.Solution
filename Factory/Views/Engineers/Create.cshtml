@@ -5,13 +5,13 @@
 @model Factory.Models.Engineer
 
 <div class="box">
-  <div class="box-header">
-    <div class="title">Add Engineer</div>
-    <div class="spacer"></div>
-    <div class="x">@Html.ActionLink("x","Index", "Home")</div>
-    
+  <div class="title">
+    <img src="~/img/Documents Folder.ico" width="25" height="25" class="title" />
+    <p class="title">Add Engineer</div>
+    <button>X</button>
+    <button>?</button>
   </div>
-  <div class="box-content">
+  <div class="content">
     @using (Html.BeginForm())
     {
       @Html.LabelFor(model => model.Name, "Name: ")

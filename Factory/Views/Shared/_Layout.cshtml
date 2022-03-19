@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="~/css/styles.css">
   </head>
   <body>
+    @RenderBody()
     <div id="page-containger">
       <div id="content-wrap">
         <div id="home-folders">
@@ -32,7 +33,6 @@
             <button>OK</button>
           </div>
         </div>
-        @RenderBody()
         <div id="footer">
           <div id="home"><img src="~/img/Windows Logo (without text).ico">@Html.ActionLink(" Home", "Index", "Home")</div>
           <div id="time"><img src="~/img/Book with clock.ico"> 12:34</div>
