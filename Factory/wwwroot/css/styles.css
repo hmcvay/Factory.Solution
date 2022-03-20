@@ -95,7 +95,7 @@ button:focus{
   padding:1px;
 }
 
-.box{
+#machines{
   width:500px;
   background:#C0C0C0;
   border-width:1px;
@@ -103,10 +103,25 @@ button:focus{
   border-style:solid;
   position:absolute;
   top:20%;
-  left:46%;
-  transform: translate(-20%,-46%);
+  left:40%;
+  transform: translate(-20%,-40%);
   padding:1px;
 }
+
+#engineers{
+  width:500px;
+  background:#C0C0C0;
+  border-width:1px;
+  border-color:#FFFFFF #808080 #808080 #FFFFFF;
+  border-style:solid;
+  position:absolute;
+  top:40%;
+  left:46%;
+  transform: translate(-40%,-46%);
+  padding:1px;
+}
+
+
 div.title{
   height:25px;
   width:100%;
