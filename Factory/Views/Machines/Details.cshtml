@@ -4,31 +4,37 @@
 
 @model Factory.Models.Machine
 
-<h2>Machine Details</h2>
+<div class="box">
+  <div class="title">
+    <img src="~/img/Documents Folder.ico" width="25" height="25" class="title" />
+    <p class="title">Machine Details</p>
+     <button>X</button>
+    <button>?</button>
+  </div>
+  <div class="content">
+    <h3>@Html.DisplayNameFor(model => model.Type): @Html.DisplayFor(model => model.Type)</h3>
 
-<h3>@Html.DisplayNameFor(model => model.Type): @Html.DisplayFor(model => model.Type)</h3>
-
-@if(@Model.JoinEntities.Count == 0)
-{
-  <p>No engineers are certified to opperate this machine</p>
-}
-else
-{
-  <h4>Certified Engineers:</h4>
-  <ul>
-    @foreach(var join in Model.JoinEntities)
+    @if(@Model.JoinEntities.Count == 0)
     {
-      <li>@join.Engineer.Name</li>
-      @using (Html.BeginForm("DeleteEngineer", "Machines"))
-      {
-        @Html.Hidden("joinId", @join.MachineEngineerId)
-        <input type="submit" value="Delete" />
-      }
+      <p>No engineers are certified to opperate this machine</p>
     }
-  </ul>
-}
-
-<!-- <p>@Html.ActionLink("Back to Stages", "Index")</p> -->
-<p>@Html.ActionLink("Edit Machine", "Edit", new{ id = Model.MachineId})</p>
-<p>@Html.ActionLink("Delete Machine", "Delete", new{ id = Model.MachineId})</p>
-<!-- <p>@Html.ActionLink("Home", "Index", "Home")</p> -->
+    else
+    {
+      <h4>Certified Engineers:</h4>
+      <ul>
+        @foreach(var join in Model.JoinEntities)
+        {
+          <li>@join.Engineer.Name</li>
+          @using (Html.BeginForm("DeleteEngineer", "Machines"))
+          {
+            @Html.Hidden("joinId", @join.MachineEngineerId)
+            <input type="submit" value="Delete" />
+          }
+        }
+      </ul>
+    }
+    <button>@Html.ActionLink("Edit Machine", "Edit", new{ id = Model.MachineId})</button>
+    <button>@Html.ActionLink("Delete Machine", "Delete", new{ id = Model.MachineId})</button>
+  </div>
+</div>
+    
