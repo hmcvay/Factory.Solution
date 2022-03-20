@@ -8,8 +8,10 @@
 
 Web App for Dr. Sillystringz's Factory to keep track of their business's engineers and machines. The app allows the user to add Engineers and Machines to their database, independent from each other, as well as make connections between which Engineers are licensed to which machines, and visa-versa. 
 <br>
+
 This project is styled to look like a Windows 95 desktop and the user can navigate to different views by clicking through folders on the desktop.
 <br>
+
 This project creates and implements a backend database with full CRUD capabilities that users can access and interact with on the front-end.
 
 <br>
@@ -28,15 +30,11 @@ This project creates and implements a backend database with full CRUD capabiliti
 <br>
 
 ### NECESSARY INSTALLATIONS
-<hr>
 
 * [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-5.0.401-macos-x64-installer)
 * [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
 
-<hr>
-
 ### SETUP STEPS
-<hr>
 
 1. Clone [this](https://github.com/hmcvay/Factory.Solution) repository to your desktop
 2. Navigate to the project's root directory and create `appsettings.json` file with the following code: 
@@ -50,8 +48,6 @@ This project creates and implements a backend database with full CRUD capabiliti
 ```
 
 3. replace `{YOURPASSWORDHERE}` with the password you used when setting up MySQLWorkbench
-
-<hr>
 
 ### COMMANDS
 

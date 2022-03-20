@@ -56,6 +56,14 @@ a {
   background-color: #c3c3c3;
 }
 
+#leftmost {
+  display: flex;
+  align-items: flex-start;
+  gap: 2px;
+  justify-content: center;
+  height: 2.5rem;
+}
+
 #home {
 border: 2px white;
 border-style: outset;
@@ -69,6 +77,8 @@ text-align: center;
   width: 100px;
   text-align: center;
 }
+
+
 
 
 
@@ -115,9 +125,9 @@ button:focus{
   border-color:#FFFFFF #808080 #808080 #FFFFFF;
   border-style:solid;
   position:absolute;
-  top:40%;
+  top:30%;
   left:46%;
-  transform: translate(-40%,-46%);
+  transform: translate(-30%,-46%);
   padding:1px;
 }
 
