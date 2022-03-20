@@ -17,12 +17,13 @@
     {
       <h3> No machines have been added </h3>
     }
-
-    @foreach (Machine machine in Model)
-    {
-      <li>@Html.ActionLink($"{machine.Type}", "Details", new { id = machine.MachineId })</li>
-    }
-    <br>
+    <div class="index-display">
+      @foreach (Machine machine in Model)
+      {
+        <p>@Html.ActionLink($"{machine.Type}", "Details", new { id = machine.MachineId })</p>
+      }
+    </div>
+      <br>
     <button>@Html.ActionLink("Add Machine", "Create")</button>
   </div>
 </div>
