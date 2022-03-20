@@ -33,9 +33,11 @@
         }
       </ul>
     }
-    <button>@Html.ActionLink("Add Engineer", "AddEngineer", new{ id = Model.MachineId})</button>
-    <button>@Html.ActionLink("Edit Machine", "Edit", new{ id = Model.MachineId})</button>
-    <button>@Html.ActionLink("Delete Machine", "Delete", new{ id = Model.MachineId})</button>
+    <div class="button-layout">
+      <button>@Html.ActionLink("Add Engineer", "AddEngineer", new{ id = Model.MachineId})</button>
+      <button>@Html.ActionLink("Edit Machine", "Edit", new{ id = Model.MachineId})</button>
+      <button>@Html.ActionLink("Delete Machine", "Delete", new{ id = Model.MachineId})</button>
+    </div>
   </div>
 </div>
     
