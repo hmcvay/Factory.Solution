@@ -53,6 +53,7 @@ This project creates and implements a backend database with full CRUD capabiliti
 
 1. Navigate to the production directory, `Factory`: 
   * Run `dotnet restore` to restore all dependencies
+  * Run `dotnet ef database update` to connect to the database
   * Run `dotnet build`
   * Run `dotnet run` to run the program
   * You can now copy and paste the localhost link to your browser to view application
